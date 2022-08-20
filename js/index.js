@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let emailvalido = localStorage.getItem("emailvalido")
     console.log(emailvalido)
     if (!contraseñavalida && !emailvalido){
-        location.replace("rodriguitoalcoba.github.io/e_commerce/login.html")
+        location.replace("login.html")
     }
 });
