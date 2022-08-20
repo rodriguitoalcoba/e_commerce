@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/">
+  <link rel="stylesheet" href="index.html">
   <style>
     body {
       background-color: rgb(248, 249, 250);
@@ -19,8 +21,22 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <form>
+        <label for="email">email</label>
+        <br>
+        <input class="form-control" id="email" type="email">
+        <br>
+        <label id="errormail" class="hide" for="">Introduzca su email</label>
+        <br>
+        <label for="contraseña" class="text-md-center" >contraseña</label>
+        <br>
+        <input class="form-control" id="contraseña" type="password">
+        <br>
+        <label  id="errorcontra" class="hide" for="">Introduzca su contraseña</label>
+        <br>
+        <button type="button" id="boton" class="v">Ingresar</button>
+      </form>
+       
       </div>
     </div>
   </main>

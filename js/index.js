@@ -11,4 +11,11 @@ document.addEventListener("DOMContentLoaded", function(){
         localStorage.setItem("catID", 103);
         window.location = "products.html"
     });
+    localStorage 
+    let contraseñavalida = localStorage.getItem("contraseñavalida")
+    let emailvalido = localStorage.getItem("emailvalido")
+    console.log(emailvalido)
+    if (!contraseñavalida && !emailvalido){
+        location.replace("rodriguitoalcoba.github.io/e_commerce/login.html")
+    }
 });
