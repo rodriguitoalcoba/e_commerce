@@ -35,6 +35,7 @@ localStorage.setItem("contraseñavalida", contraseñavalida)
 
 if(contraseñavalida && emailvalido){
   location.replace("index.html")
+  localStorage.setItem("Usuario", email.value)
 }
 });
 

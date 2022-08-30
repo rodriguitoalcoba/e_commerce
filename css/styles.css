@@ -195,4 +195,28 @@ a.custom-card:hover {
   display: block; 
   color: red;
 }
-
+.form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.input{
+  margin: auto;
+  width: 300px;
+}
+.img{
+  width: 400px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.bot{
+  width: 80px;
+  margin: auto;
+  padding: 10px;
+  color: #fff;
+  background-color: #0087F7;
+}
+#mt{
+  margin-top: -100px;
+}

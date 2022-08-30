@@ -39,4 +39,9 @@ let getJSONData = function(url){
         hideSpinner();
         return result;
     });
+    
 }
+document.addEventListener("DOMContentLoaded", function(){
+  const perfil = document.getElementsByClassName("nav-item")[3];
+  perfil.innerHTML = `<a class="nav-link" href="my-profile.html">${localStorage.getItem("Usuario")}</a>`;
+});
