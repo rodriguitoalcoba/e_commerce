@@ -191,10 +191,7 @@ a.custom-card:hover {
 .hide {
   display: none;
 }
-.oculto {
-  display: block; 
-  color: red;
-}
+
 .form{
   display: flex;
   flex-direction: column;
@@ -219,4 +216,19 @@ a.custom-card:hover {
 }
 #mt{
   margin-top: -100px;
+}
+
+.filtro{
+  display: none;
+}
+tr {
+  border-bottom: black 1px solid;
+}
+.borrar {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }

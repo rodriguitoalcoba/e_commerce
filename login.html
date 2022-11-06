@@ -9,8 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/">
-  <link rel="stylesheet" href="index.html">
+
   <style>
     body {
       background-color: rgb(248, 249, 250);
@@ -21,22 +20,26 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <img class="img" src="/img/login.png" alt="">
+      <img class="img" src="img/login.png" alt="">
       <h2 class="form">Inicio de Sesión</h2>
       <form class="form">
         <label for="email">Email</label>
         <br>
-        <input class="form-control input" id="email" type="email">
+        <input class="form-control input" id="email" type="email" oninput="validar()">
         <br>
-        <label id="errormail" class="hide" for="">Introduzca su email</label>
+        <div class="invalid-feedback " id="alertEmail">
+          <p>Introduzca su email </p>
+        </div>
         <br>
         <label for="contraseña" class="text-md-center" >Contraseña</label>
         <br>
-        <input class="form-control input" id="contraseña" type="password">
+        <input class="form-control input" id="contraseña" type="password"  oninput="validar()">
         <br>
-        <label  id="errorcontra" class="hide" for="">Introduzca su contraseña</label>
+        <div class="invalid-feedback " id="alertContra">
+          <p>Introduzca su contraseña </p>
+        </div>
         <br>
-        <button class="bot" type="button" id="boton" class="v">Ingresar</button>
+        <button class="bot" type="button" id="boton" onclick="validar(), redirigir()">Ingresar</button>
       </form>
        
       </div>

@@ -41,7 +41,34 @@ let getJSONData = function(url){
     });
     
 }
+
+function cerrar() {
+  localStorage.removeItem("emailvalido")
+  localStorage.removeItem("contraseñavalida")
+  location.replace("login.html")
+}
+
+function datosLs(id){
+  localStorage.setItem("id", id)
+  window.location = "product-info.html" 
+}
+
 document.addEventListener("DOMContentLoaded", function(){
   const perfil = document.getElementsByClassName("nav-item")[3];
-  perfil.innerHTML = `<a class="nav-link" href="my-profile.html">${localStorage.getItem("Usuario")}</a>`;
+  perfil.innerHTML = ` 
+  
+  <div class="dropdown ">
+  
+  <a  class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="desplegar"> ${localStorage.getItem("Usuario")}</a>
+  
+  <div class="dropdown-menu w-100" aria-labelledby="desplegar">
+  
+  <a href="cart.html" class="dropdown-item">Mi Carrito</a>
+  <a href="my-profile.html" class="dropdown-item">Mi Perfil</a>
+  <p class="dropdown-item cursor-active" onclick="cerrar()" id="salir">Cerrar Sesión</p>
+  
+  </div>
+  </div>
+  `;
 });
+
