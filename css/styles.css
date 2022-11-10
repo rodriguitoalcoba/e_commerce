@@ -232,3 +232,20 @@ tr {
   color: white;
   font-weight: bold;
 }
+
+
+
+#infoProductos{
+  margin-left: 20px;
+  background-color: #E0E0E0;
+}
+
+#btnC{
+  border-color: #0087F7;
+  color: #0087F7;
+background-color: azure;
+  
+  margin-top: 150px;
+  
+}
+

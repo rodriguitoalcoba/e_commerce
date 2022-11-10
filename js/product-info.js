@@ -57,7 +57,8 @@ function infoProducts(){
         }
         
         if(informacionProducto.cost && informacionProducto.currency && informacionProducto.description && informacionProducto.category && informacionProducto.soldCount !== "" && informacionProducto.images) {
-            document.getElementById("precio").textContent = `${informacionProducto.cost}`
+            document.getElementById("name").textContent = `${informacionProducto.name} `
+            document.getElementById("precio").textContent = `${informacionProducto.currency} ${informacionProducto.cost}`
             document.getElementById("descripcion").textContent = `${informacionProducto.description}`
             document.getElementById("categoria").textContent = `${informacionProducto.category}`
             document.getElementById("vendidos").textContent = `${informacionProducto.soldCount}`
@@ -70,8 +71,9 @@ function verImagenes(){
     for (let i = 0; i < informacionProducto.images.length; i++) {
         const imgs = informacionProducto.images[i];
         
-        document.getElementById("imagenes").innerHTML += `
-        <img src="${imgs}" class="col-3 cursor-active" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}"> 
+        document.getElementById("imgBtn").innerHTML += `
+       
+        <img src="${imgs}" class="col-3 cursor-active img-thumbnail d-flex justify-content-between" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}"> 
         `
       document.querySelector(".carousel-inner").getElementsByTagName("img")[i].src = `${imgs}`
 
@@ -85,10 +87,12 @@ function verComentarios() {
 for (let comments of comentarios) {
     
      document.getElementById("comentarios").innerHTML += `
+     <hr>
      <div class="mt-2">
      <b>${comments.user} - <span class="fw-light">${comments.dateTime}</span></b>
      <p class="mb-0">${comments.description}</p>`+estrellas(comments.score)+`
      </div>
+     
      ` 
  }
 }
@@ -155,6 +159,7 @@ function addCarro(id) {
             
                 document.getElementById("comentarios").innerHTML +=  `
                     <div class="mt-2 ">
+                    <hr>
                      <b>${localStorage.getItem("Usuario")} -<span class="fw-light"> ${fecha.getFullYear()}-${fecha.getMonth()}-${fecha.getDate()} ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}</span></b>
                      <p class="mb-0">${com.value}</p>`+estrellas(puntuado.value)+`
                      </div>

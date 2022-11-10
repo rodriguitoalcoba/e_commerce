@@ -99,29 +99,3 @@ inputImagen.addEventListener("change", function () {
   reader.readAsDataURL(this.files[0]);
   
 })
-// function habilitarBotones() {
-//   if(inputBuscar.value == ""){
-//     btnBuscar.disabled = true
-//   }
-//   else{
-//     btnBuscar.disabled = false
-//   }
-//   if(inputNombre == "" || inputApellido == "" ){
-//     btnAgregar.disabled = true
-//   } else{
-//     btnAgregar.disabled = false
-//   }
-
-//   if(inputModificar.value == ""){
-//     btnModificar.disabled = true
-//   }
-//   else{
-//     btnModificar.disabled = false
-//   }
-//   if(inputBorrar.value == ""){
-//     btnBorrar.disabled = true
-//   }
-//   else{
-//     btnBorrar.disabled = false
-//   }
-// }
