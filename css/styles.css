@@ -238,14 +238,16 @@ tr {
 #infoProductos{
   margin-left: 20px;
   background-color: #E0E0E0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 #btnC{
+  width: 100%;
   border-color: #0087F7;
   color: #0087F7;
 background-color: azure;
-  
-  margin-top: 150px;
   
 }
 
